@@ -5,21 +5,21 @@ import java.util.Collection;
 /**
  * Created by dmrachkovskyi on 6/3/2016.
  */
-public interface SimpleList {
+public interface SimpleList<E> extends Iterable<E> {
 
-    void add(Object element);
+    void add(E element);
 
-    Object get(int index);
+    E get(int index);
 
-    void set(int index, Object element);
+    E set(int index, E element);
 
-    int remove(Object element);
+    int remove(E element);
 
-    void addAll(Collection source);
+    void addAll(Collection<? extends E> source);
 
     int size();
 
-    boolean contains(Object element);
+    boolean contains(E element);
 
     boolean isEmpty();
 
